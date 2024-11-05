@@ -1,0 +1,3 @@
+# Role: Handle database operations (data access layer).
+# Description: The repository layer is responsible for interacting with the database and abstracting away the direct database queries. It contains functions that perform operations like creating, reading, updating, and deleting (CRUD) records from the database. The repository pattern is used to encapsulate database logic, making it easier to maintain, test, and swap out the data layer if needed (e.g., switch from SQLite to PostgreSQL).
+# Location: Often found in a directory like app/repositories/ or app/services/.

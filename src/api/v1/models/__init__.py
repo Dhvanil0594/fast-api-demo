@@ -1,0 +1,3 @@
+# Role: Define the structure of the database tables.
+# Description: Models represent the ORM (Object-Relational Mapping) classes that map to the database tables. In FastAPI, we typically use SQLAlchemy or Tortoise ORM to interact with the database, and the models define the structure of those tables and how they are related.
+# Location: Usually found in a directory like app/models/ or app/database/ in your project structure.

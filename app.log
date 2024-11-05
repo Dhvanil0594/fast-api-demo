@@ -1,0 +1,12 @@
+2024-11-05 12:04:54,836 - app - INFO - Inside function: login.
+2024-11-05 12:05:32,129 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-05 12:06:34,724 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-05 12:06:53,847 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-05 12:07:01,636 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-05 12:07:25,236 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-05 12:07:25,236 - app - INFO - 1
+2024-11-05 12:08:03,246 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-05 12:08:03,246 - app - INFO - username='test' email=None password='123'
+2024-11-05 12:12:40,474 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-05 12:13:00,299 - app - INFO - Inside function: login. user: username=None email='test@example.co' password='123'
+2024-11-05 12:13:05,925 - app - INFO - Inside function: login. user: username=None email='test@example.com' password='123'
