@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.security import OAuth2PasswordBearer
 from src.routes.router import router
 # from fastapi_project.database.database import engine, Base
 

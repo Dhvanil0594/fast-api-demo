@@ -10,3 +10,16 @@
 2024-11-05 12:12:40,474 - app - INFO - Inside function: login. user: username='test' email=None password='123'
 2024-11-05 12:13:00,299 - app - INFO - Inside function: login. user: username=None email='test@example.co' password='123'
 2024-11-05 12:13:05,925 - app - INFO - Inside function: login. user: username=None email='test@example.com' password='123'
+2024-11-05 13:07:50,280 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-05 17:09:26,700 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-05 18:35:01,143 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-05 18:35:52,085 - app - INFO - Inside function: get_user
+2024-11-05 18:35:52,085 - app - INFO - Inside function: get_user
+2024-11-05 18:35:52,087 - app - ERROR - Error decoding token: 404: User not found
+2024-11-05 18:37:22,776 - app - INFO - Inside function: get_user
+2024-11-05 18:37:22,777 - app - INFO - Inside function: get_user
+2024-11-05 18:37:22,777 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730813701}
+2024-11-05 18:37:22,789 - app - ERROR - Error decoding token: 404: User not found
+2024-11-05 18:42:13,745 - app - INFO - Inside function: get_user
+2024-11-05 18:42:13,745 - app - INFO - Inside function: get_user
+2024-11-05 18:42:13,745 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730813701}
