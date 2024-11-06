@@ -26,7 +26,7 @@ def create_user(user: _US.UserCreate, db: Session = Depends(get_db)):
     
 
 @router.post("/login")
-def login(user: _US.UserLogin, db: Session = Depends(get_db)):
+async def login(user: _US.UserLogin, db: Session = Depends(get_db)):
     logger.info(f"Inside function: login. user: {user}")
 
     # Check if the user exists using username or email
@@ -41,7 +41,7 @@ def login(user: _US.UserLogin, db: Session = Depends(get_db)):
 
     # Create an access token
     access_token_expires = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
-    access_token = create_access_token(
+    access_token = await create_access_token(
         data={"sub": db_user.email},
         expires_delta=access_token_expires
     )

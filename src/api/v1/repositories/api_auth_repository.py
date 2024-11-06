@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from config.config import settings
 from logger import logger
 
-def create_access_token(data: dict, expires_delta: timedelta = None):
+async def create_access_token(data: dict, expires_delta: timedelta = None):
     to_encode = data.copy()
     if expires_delta:
         expire = datetime.now(timezone.utc) + expires_delta
@@ -16,7 +16,7 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
     encoded_jwt = jwt.encode(to_encode, settings.JWT_SECRET_KEY, algorithm=settings.ALGORITHM)
     return encoded_jwt
 
-def create_refresh_token(data: dict, expires_delta: timedelta = None):
+async def create_refresh_token(data: dict, expires_delta: timedelta = None):
     to_encode = data.copy()
     if expires_delta:
         expire = datetime.now(timezone.utc) + expires_delta
@@ -34,7 +34,7 @@ def verify_token(token: str):
     except:
         raise HTTPException(status_code=401, detail="Could not validate credentials")
 
-def get_user_from_token(token: str, db: Session) -> User:
+async def get_user_from_token(token: str, db: Session) -> User:
     """
     Decodes the JWT token and retrieves the user from the database.
     """

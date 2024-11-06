@@ -14,7 +14,7 @@ router = APIRouter(prefix="/user")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/user-auth/token")
 
 @router.get("/me", response_model=_US.UserResponse)
-def get_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
+async def get_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
     """
     Get the logged-in user's data using the JWT token from the Authorization header.
     """
@@ -27,7 +27,7 @@ def get_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db))
     logger.info("Inside function: get_user")
     
     # Use the decoded token to retrieve user details
-    user = get_user_from_token(token, db)
+    user = await get_user_from_token(token, db)
 
     if user is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
@@ -40,7 +40,7 @@ def get_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db))
 
 
 @router.post("/assign-user-to-department", response_model=_US.UserResponse, status_code=status.HTTP_200_OK)
-def assign_user_to_department(
+async def assign_user_to_department(
     request: _US.AssignUserToDepartmentRequest, token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)
 ):
     if token is None:
@@ -48,12 +48,12 @@ def assign_user_to_department(
     
     check_token = verify_token(token)
     # Check if the department exists
-    department = _DR.get_department_by_id(db, request.department_id)
+    department = await _DR.get_department_by_id(db, request.department_id)
     if not department:
         raise HTTPException(status_code=404, detail="Department not found")
 
     # Assign the user to the department
-    user = _UR.assign_user_to_department(db, request.user_id, request.department_id)
+    user = await _UR.assign_user_to_department(db, request.user_id, request.department_id)
     if not user:
         raise HTTPException(status_code=404, detail="User not found")
 

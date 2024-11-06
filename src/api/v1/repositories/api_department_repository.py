@@ -6,14 +6,14 @@ from src.api.v1.schemas.department_schemas import DepartmentCreate, DepartmentUp
 from src.api.v1.repositories.api_auth_repository import get_user_from_token
 from logger import logger
 
-def get_departments(db: Session, skip: int = 0, limit: int = 10):
+async def get_departments(db: Session, skip: int = 0, limit: int = 10):
     return db.query(Department).order_by(Department.created_at.desc()).offset(skip).limit(limit).all()
 
-def get_department_by_id(db: Session, department_id: int):
+async def get_department_by_id(db: Session, department_id: int):
     return db.query(Department).filter(Department.id == department_id).first()
 
-def create_department(db: Session, department: DepartmentCreate, token: str):
-    user = get_user_from_token(token, db)
+async def create_department(db: Session, department: DepartmentCreate, token: str):
+    user = await get_user_from_token(token, db)
     # Create a new department
     db_department = Department(name=department.name, created_by=user.id, modified_by=user.id)
     db.add(db_department)
@@ -22,8 +22,8 @@ def create_department(db: Session, department: DepartmentCreate, token: str):
     return db_department
 
 
-def update_department(db: Session, department_id: int, department_data: DepartmentUpdate, token: str):
-    user = get_user_from_token(token, db)
+async def update_department(db: Session, department_id: int, department_data: DepartmentUpdate, token: str):
+    user = await get_user_from_token(token, db)
     db_department = db.query(Department).filter(Department.id == department_id).first()
     if not db_department:
         return None
@@ -37,7 +37,7 @@ def update_department(db: Session, department_id: int, department_data: Departme
     db.refresh(db_department)
     return db_department
 
-def delete_department(db: Session, department_id: int):
+async def delete_department(db: Session, department_id: int):
     db_department = db.query(Department).filter(Department.id == department_id).first()
     if db_department:
         db.delete(db_department)

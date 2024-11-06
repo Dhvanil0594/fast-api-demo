@@ -4,7 +4,6 @@ from database.database import get_db
 from src.api.v1.schemas import user_schemas as _US
 from src.api.v1.models.user_models import user_info as _UI
 from logger import logger
-from src.api.v1.repositories.api_auth_repository import get_user_from_token, verify_token
 from fastapi.security import OAuth2PasswordBearer
 from src.api.v1.repositories import api_department_repository as _DR
 from src.api.v1.repositories import api_user_repository as _UR
