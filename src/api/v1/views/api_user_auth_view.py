@@ -4,7 +4,7 @@ from src.api.v1.models.user_models.user_info import User
 from src.api.v1.schemas import user_schemas as _US
 from src.api.v1.services import auth_utils as _AU
 from database.database import get_db
-from config.config import ACCESS_TOKEN_EXPIRE_MINUTES
+from config.config import settings
 from datetime import timedelta
 from src.api.v1.repositories.api_auth_repository import create_access_token
 from logger import logger
@@ -40,7 +40,7 @@ def login(user: _US.UserLogin, db: Session = Depends(get_db)):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
 
     # Create an access token
-    access_token_expires = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token_expires = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
     access_token = create_access_token(
         data={"sub": db_user.email},
         expires_delta=access_token_expires
