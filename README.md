@@ -75,6 +75,21 @@ To initialize the database schema, run the following command (make sure you’ve
 alembic upgrade head
 ```
 
+#### Note (optional):
+* If you need to recreate the database, you can run the following command:
+
+```
+alembic downgrade base
+```
+
+* You can also use `alembic downgrade head` to roll back to the latest version.
+
+* If you want to update the database, you can use following command:
+```
+alembic revision --autogenerate -m "update database"
+```
+
+
 ### Step 2: Start the FastAPI Server
 
 Once dependencies are installed and the database is set up, you can start the development server using Uvicorn:

@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta, timezone
 from fastapi import HTTPException
 from jose import jwt
-from src.api.v1.models import models
+from src.api.v1.models.user_models.user_info import User
 from sqlalchemy.orm import Session
 from config.config import SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES
 from logger import logger
@@ -34,7 +34,7 @@ def verify_token(token: str):
     except:
         raise HTTPException(status_code=401, detail="Could not validate credentials")
 
-def get_user_from_token(token: str, db: Session) -> models.User:
+def get_user_from_token(token: str, db: Session) -> User:
     """
     Decodes the JWT token and retrieves the user from the database.
     """
@@ -48,7 +48,7 @@ def get_user_from_token(token: str, db: Session) -> models.User:
             raise HTTPException(status_code=401, detail="Invalid token or missing user ID")
         
         # Query the database for the user
-        user = db.query(models.User).filter(models.User.email == user_email).first()
+        user = db.query(User).filter(User.email == user_email).first()
         if user is None:
             raise HTTPException(status_code=404, detail="User not found")
         

@@ -23,3 +23,81 @@
 2024-11-05 18:42:13,745 - app - INFO - Inside function: get_user
 2024-11-05 18:42:13,745 - app - INFO - Inside function: get_user
 2024-11-05 18:42:13,745 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730813701}
+2024-11-06 11:21:12,351 - app - INFO - Inside function: get_user
+2024-11-06 11:21:12,351 - app - INFO - Inside function: get_user
+2024-11-06 11:21:12,351 - app - ERROR - Error decoding token: Signature has expired.
+2024-11-06 11:21:20,068 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-06 11:23:57,832 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-06 11:24:38,206 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-06 11:24:45,946 - app - INFO - Inside function: login. user: username='test' email=None password='123'
+2024-11-06 11:25:55,080 - app - INFO - Inside function: get_user
+2024-11-06 11:25:55,080 - app - INFO - Inside function: get_user
+2024-11-06 11:25:55,080 - app - ERROR - Error decoding token: Signature has expired.
+2024-11-06 11:26:04,765 - app - INFO - Inside function: get_user
+2024-11-06 11:26:04,765 - app - INFO - Inside function: get_user
+2024-11-06 11:26:04,765 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:27:00,668 - app - INFO - Inside function: get_user
+2024-11-06 11:27:00,669 - app - INFO - Inside function: get_user
+2024-11-06 11:27:00,669 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:29:31,984 - app - INFO - Inside function: get_user
+2024-11-06 11:29:31,984 - app - INFO - Inside function: get_user
+2024-11-06 11:29:31,985 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:32:58,252 - app - INFO - Inside function: get_user
+2024-11-06 11:32:58,252 - app - INFO - Inside function: get_user
+2024-11-06 11:32:58,283 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:33:24,273 - app - INFO - Inside function: get_user
+2024-11-06 11:33:24,273 - app - INFO - Inside function: get_user
+2024-11-06 11:33:24,274 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:33:40,002 - app - INFO - Inside function: get_user
+2024-11-06 11:33:40,002 - app - INFO - Inside function: get_user
+2024-11-06 11:33:40,003 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:34:13,105 - app - INFO - Inside function: get_user
+2024-11-06 11:34:13,105 - app - INFO - Inside function: get_user
+2024-11-06 11:34:13,105 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:34:13,119 - app - INFO - User: <src.api.v1.models.user_models.user_info.User object at 0x7dae657ebbe0>
+2024-11-06 11:34:42,026 - app - INFO - Inside function: get_user
+2024-11-06 11:34:42,027 - app - INFO - Inside function: get_user
+2024-11-06 11:34:42,027 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:34:42,041 - app - INFO - User: {'_sa_instance_state': <sqlalchemy.orm.state.InstanceState object at 0x76a7754f9f60>, 'email': 'test@example.com', 'username': 'test', 'department_id': 1, 'hashed_password': '$2b$12$kKiRauvWNPYGzss5rNZD/.ZuJJt5nZT065lbFXUZhCsOEL.vfcjAW', 'id': 1}
+2024-11-06 11:35:02,270 - app - INFO - Inside function: get_user
+2024-11-06 11:35:02,270 - app - INFO - Inside function: get_user
+2024-11-06 11:35:02,271 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:35:02,285 - app - INFO - User: {'_sa_instance_state': <sqlalchemy.orm.state.InstanceState object at 0x75ba7732ee00>, 'email': 'test@example.com', 'username': 'test', 'department_id': 1, 'hashed_password': '$2b$12$kKiRauvWNPYGzss5rNZD/.ZuJJt5nZT065lbFXUZhCsOEL.vfcjAW', 'id': 1}
+2024-11-06 11:39:05,800 - app - INFO - Inside function: get_user
+2024-11-06 11:39:05,800 - app - INFO - Inside function: get_user
+2024-11-06 11:39:05,801 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:39:22,867 - app - INFO - Inside function: get_user
+2024-11-06 11:39:22,868 - app - INFO - Inside function: get_user
+2024-11-06 11:39:22,868 - app - INFO - Decoded token: {'sub': 'test@example.com', 'exp': 1730874286}
+2024-11-06 11:40:51,561 - app - INFO - Inside function: login. user: username='t1' email=None password='123'
+2024-11-06 11:40:55,033 - app - INFO - Inside function: get_user
+2024-11-06 11:40:55,033 - app - INFO - Inside function: get_user
+2024-11-06 11:40:55,033 - app - INFO - Decoded token: {'sub': 't1@t1.com', 'exp': 1730875251}
+2024-11-06 12:01:56,626 - app - INFO - Decoded token: {'sub': 't1@t1.com', 'exp': 1730875251}
+2024-11-06 12:04:01,219 - app - INFO - Decoded token: {'sub': 't1@t1.com', 'exp': 1730875251}
+2024-11-06 12:04:01,261 - app - INFO - Inside create_department.......<src.api.v1.models.department_models.department_info.Department object at 0x72cd24a7afe0>
+2024-11-06 12:04:19,259 - app - INFO - Decoded token: {'sub': 't1@t1.com', 'exp': 1730875251}
+2024-11-06 12:04:19,300 - app - INFO - Inside create_department.......{'_sa_instance_state': <sqlalchemy.orm.state.InstanceState object at 0x7a278c11fe80>, 'name': 'MANAGMENT', 'created_by': 't1', 'modified_by': 't1'}
+2024-11-06 12:04:47,323 - app - INFO - Decoded token: {'sub': 't1@t1.com', 'exp': 1730875251}
+2024-11-06 12:04:47,364 - app - INFO - Inside create_department.......{'_sa_instance_state': <sqlalchemy.orm.state.InstanceState object at 0x75bf6874e8c0>, 'name': 'MANAGMENT', 'created_by': 2, 'modified_by': 2}
+2024-11-06 12:05:14,357 - app - INFO - Decoded token: {'sub': 't1@t1.com', 'exp': 1730875251}
+2024-11-06 12:05:14,396 - app - INFO - Inside create_department.......{'_sa_instance_state': <sqlalchemy.orm.state.InstanceState object at 0x7f88e5f631c0>, 'name': 'MANAGMENT', 'created_by': 2, 'modified_by': 2}
+2024-11-06 12:23:03,190 - app - ERROR - Error decoding token: Signature has expired.
+2024-11-06 12:23:12,432 - app - INFO - Inside function: login. user: username='t1' email=None password='123'
+2024-11-06 12:23:14,547 - app - INFO - Decoded token: {'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:23:46,847 - app - INFO - Decoded token: {'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:28:22,346 - app - INFO - Decoded token: {'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:28:58,649 - app - INFO - Decoded token: {'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:48:14,716 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:48:14,716 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:48:24,094 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:48:24,094 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:48:31,090 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:48:31,090 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:49:07,620 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:49:07,621 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730877792}
+2024-11-06 12:57:03,625 - app - INFO - Inside function: login. user: username='t1' email=None password='123'
+2024-11-06 12:57:08,636 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730908023}
+2024-11-06 12:57:23,267 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730908023}
+2024-11-06 13:02:06,105 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730908023}
+2024-11-06 13:02:12,303 - app - INFO - Token verified successfully......{'sub': 't1@t1.com', 'exp': 1730908023}
