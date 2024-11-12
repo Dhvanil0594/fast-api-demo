@@ -13,6 +13,11 @@ router = APIRouter(prefix="/user-auth")
 
 @router.post("/signup", response_model=_US.UserResponse)
 def create_user(user: _US.UserCreate, db: Session = Depends(get_db)):
+    # check if any field is missing or empty
+    if not user.username or not user.email or not user.password:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="username, email, and password are required")
+
+    # Check if the email is already registered
     existing_user = db.query(User).filter(User.email == user.email).first()
     if existing_user:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Email already registered")
